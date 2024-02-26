@@ -16,7 +16,7 @@ async function main() {
   // Interact with the deployed marketplace
   const marketplace = await ethers.getContractAt("Marketplace", deployedMarketplaceAddress);
 
-  // Example: Adding a product to the marketplace
+  // Adding a product to the marketplace
   await marketplace.addProduct("Product 1", ethers.parseEther("0.1"));
   console.log("Product added to the marketplace!");
 
