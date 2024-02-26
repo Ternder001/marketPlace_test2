@@ -1,7 +1,6 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  // Replace <MarketplaceFactoryAddress> with the address of the deployed MarketplaceFactory contract
   const marketplaceFactoryAddress = "0x29DFce7F7135c0b871d70c7483518de52Ec766E2";
   const marketplaceFactory = await ethers.getContractAt("MarketplaceFactory", marketplaceFactoryAddress);
 
@@ -21,9 +20,6 @@ async function main() {
   await marketplace.addProduct("Product 1", ethers.parseEther("0.1"));
   console.log("Product added to the marketplace!");
 
-//   // Example: Buying a product from the marketplace
-//   await marketplace.buyProduct(1, { value: ethers.parseEther("0.1") });
-//   console.log("Product bought from the marketplace!");
 }
 
 main()
